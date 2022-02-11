@@ -1,11 +1,13 @@
 from django.utils import timezone
 from django.db import models
+from django.urls import reverse
 import datetime
+
 
 # Create your models here.
 
 class Question(models.Model):
-    question_text = models.CharField(max_length=200)
+    question_text = models.CharField('question', max_length=300)
     pub_date = models.DateTimeField('date published')
 
     def __str__(self):
